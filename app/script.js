@@ -70,6 +70,18 @@ async function initMap() {
     types: ['address'],
   });
 
+   // Obtener la ubicación del usuario
+   if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const userLocation = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      map.setCenter(userLocation);
+      marker.position = userLocation;
+    });
+  }
+
   autocomplete.addListener('place_changed', () => {
     const place = autocomplete.getPlace();
     if (!place.geometry) {
