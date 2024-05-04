@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	height: 100vh;
+	background-color: rgb(31, 31, 31);
   }
 
 
@@ -15,7 +16,7 @@ body {
 }
 
 .booking-form {
-	background: rgba(0, 0, 0, 0.7);
+	background: rgb(31, 31, 31);
 	padding: 40px;
 	border-radius: 6px;
 }
@@ -168,44 +169,39 @@ body {
 	opacity: 0.9;
 }
   
-  .sb-title {
-	position: relative;
-	top: -12px;
-	font-family: Roboto, sans-serif;
-	font-weight: 500;
-  }
-  
-  .sb-title-icon {
-	position: relative;
-	top: -5px;
-  }
-  
-  .card-container {
+
+
+/* MAP */
+.card-container {
 	display: flex;
-	height: 500px;
-	width: 600px;
+	height: 300px;
   }
-  
+
   .panel {
-	background: white;
+	background: transparent;
 	width: 300px;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
   }
-  
-  .half-input-container {
-	display: flex;
-	justify-content: space-between;
+
+  .sb-title-icon {
+	color: white;
+	position: relative;
+	top: -5px;
   }
-  
-  .half-input {
-	max-width: 120px;
+
+  .sb-title {
+	color: white;
+	position: relative;
+	top: -12px;
+	font-family: Roboto, sans-serif;
+	font-weight: 500;
   }
   
   .map {
-	width: 300px;
+	width: 100%;
   }
   
   h2 {
@@ -215,10 +211,8 @@ body {
   
   input {
 	height: 30px;
-  }
-  
-  input {
 	border: 0;
+	border-radius: 10px;
 	border-bottom: 1px solid black;
 	font-size: 14px;
 	font-family: Roboto, sans-serif;
