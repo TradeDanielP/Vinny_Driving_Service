@@ -30,43 +30,57 @@
 				<div class="row">
 					<div class="booking-form">
 
-						<form>
+						<form class="form">
+
+							<div class="contendedor">
+
+								<div class="primero row">
+								
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="form-label">Pick up Selection</span>
+											<input type="text" class="form-control" placeholder="Pick up location"
+												id="pickup-location-input" />
+										</div>
+									</div>
+	
+										<!-- MAP 1 -->
+										<div class="col-md-12">
+											<div class="form-group">
+												<div class="card-container">
+													<div class="map" id="gmp-map1"></div>
+												</div>
+											</div>
+										</div>
+		
+	
+								</div>
+	
+								<div class="primero row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="form-label">Drop off Selection</span>
+											<input class="form-control" type="text" placeholder="Drop off location"
+												id="dropoff-location-input">
+										</div>
+									</div>
+	
+										<!-- MAP 2 -->
+										<div class="col-md-12">
+											<div class="form-group">
+												<div class="card-container">
+													<div class="map" id="gmp-map2"></div>
+												</div>
+											</div>
+										</div>
+	
+								</div>
+
+							</div>
+
+
 
 							<div class="row">
-
-								<div class="col-md-6">
-									<div class="form-group">
-										<span class="form-label">Pick up Selection</span>
-										<input type="text" class="form-control" placeholder="Pick up location"
-											id="pickup-location-input" />
-									</div>
-								</div>
-
-								<div class="col-md-6">
-									<div class="form-group">
-										<span class="form-label">Drop off Selection</span>
-										<input class="form-control" type="text" placeholder="Drop off location"
-											id="dropoff-location-input">
-									</div>
-								</div>
-
-								<!-- MAP 1 -->
-								<div class="col-md-6">
-									<div class="form-group">
-										<div class="card-container">
-											<div class="map" id="gmp-map1"></div>
-										</div>
-									</div>
-								</div>
-
-								<!-- MAP 2 -->
-								<div class="col-md-6">
-									<div class="form-group">
-										<div class="card-container">
-											<div class="map" id="gmp-map2"></div>
-										</div>
-									</div>
-								</div>
 
 								<div class="col-md-6">
 									<div class="form-group">
@@ -121,6 +135,7 @@
 								</div>
 
 							</div>
+
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group-text">
@@ -151,6 +166,7 @@
 
 	<script src="/app/app.js"></script>
 	<script src="/app/map.js"></script>
+	<script src="/app/responsive.js"></script>
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOKj95rXV_Y2rogJcHRCRc9H8QWN1Zxlw&libraries=places,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC"
 		async defer></script>
