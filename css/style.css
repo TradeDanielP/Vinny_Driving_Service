@@ -1,13 +1,19 @@
 body {
 	margin: 0;
 	height: 100vh;
-	background-color: rgb(31, 31, 31);
+	background-color: rgb(10, 10, 10);
+	font-family: Georgia,Times,Times New Roman,serif; 
   }
 
-
+.bg{
+	position: absolute;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	opacity: 5%;
+}
 
 #booking {
-	font-family: 'PT Sans', sans-serif;
 	display: flex;
 	align-items: center;
 	flex-direction: row;
@@ -15,10 +21,12 @@ body {
 	height: 100%;
 }
 
+.car{
+	z-index: -10;
+}
+
 .booking-form {
-	background: rgb(31, 31, 31);
 	padding: 40px;
-	border-radius: 6px;
 }
 
 .booking-form .form-group {
@@ -35,7 +43,7 @@ body {
 	font-weight: 400;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	border-radius: 40px;
+	border-radius: 5px;
 	padding: 0px 25px;
 }
 
@@ -93,72 +101,19 @@ body {
 	color: #fff;
 }
 
-.booking-form .form-checkbox input {
-	position: absolute !important;
-	margin-left: -9999px !important;
-	visibility: hidden !important;
-}
-
-.booking-form .form-checkbox label {
-	position: relative;
-	padding-top: 4px;
-	padding-left: 30px;
-	font-weight: 400;
-	color: #fff;
-}
-
-.booking-form .form-checkbox label+label {
-	margin-left: 15px;
-}
-
-.booking-form .form-checkbox input+span {
-	position: absolute;
-	left: 2px;
-	top: 4px;
-	width: 20px;
-	height: 20px;
-	background: #fff;
-	border-radius: 50%;
-}
-
-.booking-form .form-checkbox input+span:after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 0px;
-	height: 0px;
-	border-radius: 50%;
-	background-color: #f23e3e;
-	-webkit-transition: 0.2s all;
-	transition: 0.2s all;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-
-.booking-form .form-checkbox input:not(:checked)+span:after {
-	opacity: 0;
-}
-
-.booking-form .form-checkbox input:checked+span:after {
-	opacity: 1;
-	width: 10px;
-	height: 10px;
-}
-
 .booking-form .form-btn {
 	margin-top: 27px;
 }
 
 .booking-form .submit-btn {
-	color: #fff;
-	background-color: #f23e3e;
-	font-weight: 400;
+	color: #ffffff;
+	background-color: #000000;
+	font-weight: 500;
 	height: 50px;
 	font-size: 14px;
 	border: none;
 	width: 100%;
-	border-radius: 40px;
+	border-radius: 5px;
 	text-transform: uppercase;
 	-webkit-transition: 0.2s all;
 	transition: 0.2s all;
@@ -196,7 +151,6 @@ body {
 	color: white;
 	position: relative;
 	top: -12px;
-	font-family: Roboto, sans-serif;
 	font-weight: 500;
   }
   
@@ -204,53 +158,32 @@ body {
 	width: 100%;
   }
   
-  h2 {
-	margin: 0;
-	font-family: Roboto, sans-serif;
-  }
-  
   input {
 	height: 30px;
 	border: 0;
-	border-radius: 10px;
 	border-bottom: 1px solid black;
 	font-size: 14px;
-	font-family: Roboto, sans-serif;
 	font-style: normal;
 	font-weight: normal;
+	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
   }
   
   input:focus::placeholder {
 	color: white;
   }
-  
-  .button-cta {
-	align-self: start;
-	background-color: #1976d2;
-	border: 0;
-	border-radius: 21px;
-	color: white;
-	cursor: pointer;
-	font-family: "Google Sans Text", sans-serif;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 27px;
-	padding: 3.5px 10.5px;
-  }
 
-
-  .contendedor{
+  .containerMaps{
 	display: flex;
 	justify-content: center;
 	gap: 4%;
   }
-  .primero{
+  .rowsMap{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
   }
   .map{
-	border-radius: 25px;
+	border-radius: 5px;
   }
 
   /* Responsive para telefonos 600px */
@@ -261,7 +194,7 @@ body {
 		flex-direction: column;
 	}
 
-	.contendedor{
+	.containerMaps{
 		flex-wrap: wrap;
 	}
 

@@ -5,8 +5,10 @@
 	<title>Vinny Driving Service</title>
 	<meta charset="utf-8">
 	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:500&amp;lang=en">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+		rel="stylesheet">
 	<!-- Bootstrap -->
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="/css/style.css" />
@@ -15,13 +17,15 @@
 <body>
 
 
+
+
 	<div id="booking" class="section">
 
 		<div class="carAnimation">
-			<video autoplay loop width="700px">
-				<source src="/video/CarMoving.mp4" type="video/mp4">hola
-			</video>
+			<video class="car" src="/video/CarMoving1.mp4" autoplay loop width="700px"></video>
 		</div>
+
+		<img class="bg" src="./img/streetBG.jpg">
 
 
 
@@ -32,10 +36,10 @@
 
 						<form class="form">
 
-							<div class="contendedor">
+							<div class="containerMaps">
 
-								<div class="primero row">
-								
+								<div class="rowsMap row">
+
 									<div class="col-md-12">
 										<div class="form-group">
 											<span class="form-label">Pick up Selection</span>
@@ -43,20 +47,20 @@
 												id="pickup-location-input" />
 										</div>
 									</div>
-	
-										<!-- MAP 1 -->
-										<div class="col-md-12">
-											<div class="form-group">
-												<div class="card-container">
-													<div class="map" id="gmp-map1"></div>
-												</div>
+
+									<!-- MAP 1 -->
+									<div class="col-md-12">
+										<div class="form-group">
+											<div class="card-container">
+												<div class="map" id="gmp-map1"></div>
 											</div>
 										</div>
-		
-	
+									</div>
+
+
 								</div>
-	
-								<div class="primero row">
+
+								<div class="rowsMap row">
 									<div class="col-md-12">
 										<div class="form-group">
 											<span class="form-label">Drop off Selection</span>
@@ -64,16 +68,16 @@
 												id="dropoff-location-input">
 										</div>
 									</div>
-	
-										<!-- MAP 2 -->
-										<div class="col-md-12">
-											<div class="form-group">
-												<div class="card-container">
-													<div class="map" id="gmp-map2"></div>
-												</div>
+
+									<!-- MAP 2 -->
+									<div class="col-md-12">
+										<div class="form-group">
+											<div class="card-container">
+												<div class="map" id="gmp-map2"></div>
 											</div>
 										</div>
-	
+									</div>
+
 								</div>
 
 							</div>
