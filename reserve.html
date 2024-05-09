@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Vinny Driving Service</title>
+	<meta charset="utf-8">
+	<!-- Google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+		rel="stylesheet">
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/styleReserve.css" />
+</head>
+
+<body>
+
+
+
+
+	<div id="booking" class="section">
+
+		<div class="carAnimation">
+			<video class="car" src="/video/CarMoving.mp4" autoplay loop width="700px"></video>
+		</div>
+
+		<img class="bg" src="./img/streetBG.jpg">
+
+
+
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+
+						<form class="form">
+
+							<div class="containerMaps">
+
+								<div class="rowsMap row">
+
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="form-label">Pick up Selection</span>
+											<input type="text" class="form-control" placeholder="Pick up location"
+												id="pickup-location-input" />
+										</div>
+									</div>
+
+									<!-- MAP 1 -->
+									<div class="col-md-12">
+										<div class="form-group">
+											<div class="card-container">
+												<div class="map" id="gmp-map1"></div>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+
+								<div class="rowsMap row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<span class="form-label">Drop off Selection</span>
+											<input class="form-control" type="text" placeholder="Drop off location"
+												id="dropoff-location-input">
+										</div>
+									</div>
+
+									<!-- MAP 2 -->
+									<div class="col-md-12">
+										<div class="form-group">
+											<div class="card-container">
+												<div class="map" id="gmp-map2"></div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+
+
+							<div class="row">
+
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Name</span>
+										<input class="form-control" id="name" type="name" placeholder="Your full name" required>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Email</span>
+										<input class="form-control" id="email" type="email" placeholder="Your email">
+									</div>
+								</div>
+
+							</div>
+
+							<div class="row">
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">phone</span>
+										<input class="form-control" id="tel" type="tel" placeholder="Your phone" required>
+									</div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">pick-up date</span>
+										<input class="form-control" id="pickUpDate" type="date" required>
+									</div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="timeInput" class="form-label">pick-up time</label>
+										<input class="form-control" id="pick-up-time" type="time" required>
+									</div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Passengers</span>
+										<select class="form-control" required>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group-text">
+										<span class="form-label">additional remarks</span>
+										<input class="form-control" id="additionalRemarks" aria-label="With textarea"
+											placeholder="Write something to consider"></input>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-2">
+									<div class="form-btn">
+										<button class="submit-btn">reserve</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="/app/app.js"></script>
+	<script src="/app/map.js"></script>
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("mu70TjnEkweBD3L8T");
+        })();
+    </script>
+	<script src="/app/email.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOKj95rXV_Y2rogJcHRCRc9H8QWN1Zxlw&libraries=places,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC"
+		async defer></script>
+</body>
+
+</html>

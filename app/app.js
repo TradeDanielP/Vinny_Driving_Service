@@ -1,4 +1,4 @@
-const fechaInput = document.getElementById('dateInput');
+const fechaInput = document.getElementById('pickUpDate');
 
 const fechaActual = new Date();
 
