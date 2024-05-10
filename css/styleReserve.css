@@ -1,16 +1,33 @@
 body {
 	margin: 0;
 	padding: 0;
-	height: 100vh;
+	box-sizing: border-box;
 	background-color: rgb(10, 10, 10);
-	font-family: Georgia,Times,Times New Roman,serif; 
+	font-family: 'Poppins', sans-serif;
+}
+
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-.bg{
-	position: absolute;
-	background-size: cover;
+.car {
+	z-index: -10;
+}
+
+.bg {
 	width: 100%;
 	height: 100%;
+	position: absolute;
+	background-size: contain;
+	right: 0;
+	bottom: 0;
 	opacity: 5%;
 }
 
@@ -19,15 +36,10 @@ body {
 	align-items: center;
 	flex-direction: row;
 	justify-content: space-around;
-	height: 100%;
 }
 
-.car{
-	z-index: -10;
-}
-
-.booking-form {
-	padding: 40px;
+.container{
+	width: 900px;
 }
 
 .booking-form .form-group {
@@ -90,18 +102,6 @@ body {
 	transform: rotate(90deg);
 }
 
-.booking-form .form-label {
-	display: block;
-	margin-left: 20px;
-	margin-bottom: 5px;
-	font-weight: 400;
-	text-transform: uppercase;
-	line-height: 24px;
-	height: 24px;
-	font-size: 12px;
-	color: #fff;
-}
-
 .booking-form .form-btn {
 	margin-top: 27px;
 }
@@ -122,81 +122,94 @@ body {
 
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
-	opacity: 0.9;
+	opacity: 90%;
 }
-  
 
 
 /* MAP */
-.card-container {
-	display: flex;
-	height: 300px;
-  }
-
-  .panel {
-	background: transparent;
-	width: 300px;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-  }
-
-  .sb-title-icon {
-	color: white;
-	position: relative;
-	top: -5px;
-  }
-
-  .sb-title {
-	color: white;
-	position: relative;
-	top: -12px;
-	font-weight: 500;
-  }
-  
-  .map {
-	width: 100%;
-  }
-  
-  input {
-	height: 30px;
-	border: 0;
-	border-bottom: 1px solid black;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: normal;
-	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
-  }
-  
-  input:focus::placeholder {
-	color: white;
-  }
-
-  .containerMaps{
+.containerMaps {
 	display: flex;
 	justify-content: center;
 	gap: 4%;
-  }
-  .rowsMap{
+}
+
+.rowsMap {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-  }
-  .map{
+}
+
+.card-container {
+	display: flex;
+	height: 200px;
+}
+
+.map {
+	width: 100%;
 	border-radius: 5px;
+}
+
+
+@media (max-aspect-ratio: 16/9){
+	nav{
+		padding: 72px 5%;
+		justify-content: center;
+	}
+    nav .logo{
+        width: 220px;
+      }
+	nav ul{
+		padding: 0;
+	}
+    nav ul li{
+        margin-left: 50px;
+      }
+      nav ul li a{
+        font-size: 270%;
+      }
   }
 
-  /* Responsive para telefonos 600px */
-  @media only screen and (max-width: 1200px){
-
-	#booking{
+/* Responsive para telefonos 600px */
+@media only screen and (max-width: 1200px) {
+	#booking {
 		display: flex;
 		flex-direction: column;
 	}
+	.card-container{
+		height: 300px;
+	}
 
-	.containerMaps{
+	.booking-form .form-control{
+		font-size: 24px;
+	}
+	.booking-form .submit-btn{
+		font-size: 24px;
+	}
+
+	.containerMaps {
 		flex-wrap: wrap;
 	}
 
-  }
+	.col-md-12{
+		padding: 0;
+	}
+/* 
+	.emailAndName{
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	.telDateSelect{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.telAndSelect{
+		display: flex;
+	}
+
+	.dates{
+		display: flex;
+	} */
+}
