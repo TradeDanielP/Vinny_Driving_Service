@@ -4,33 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinny Professional Driving Service | Home</title>
-    <link rel="stylesheet" href="/css/styleHome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styleGeneral.css">
     <link rel="stylesheet" href="/css/styleHeaderFooter.css">
+    <link rel="stylesheet" href="/css/styleHome.css">
+    <link rel="stylesheet" href="/css/styleReserve.css">
+    <link rel="stylesheet" href="/css/about.css">
+	<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <div class="hero">
+    <section class="home" id="section1">
 
         <video autoplay loop muted plays-inline class="backVideo">
-            <source src="/video/videoCar.mp4" type="video/mp4">
+            <source src="/video/Car.mp4" type="video/mp4">
         </video>
 
         <nav>
             <img src="/img/carLogo.png" class="logo">
             <ul>
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="/reserve.html">RESERVE</a></li>
-                <li><a href="/about.html">ABOUT ME</a></li>
+                <li><a href="#section1">HOME</a></li>
+                <li><a href="#section2">RESERVE</a></li>
+                <li><a href="#section3">ABOUT ME</a></li>
             </ul>
         </nav>
         
         <div class="content">
             <h1>Vinny Driving Professional Service</h1>
-            <a href="reserve.html">Reserve</a>
+            <a class="buttonReserve1" href="#section2">Reserve</a>
         </div>
-    </div>
+    </section>
 
+    <div class="mainSection">
+
+        <section class="reserve" id="section2" >
+    
+            <div id="booking">
+                <div class="carAnimation">
+                    <img class="car" src="/img/carimg.png" width="400px">
+                   <!--  <video class="car" src="/video/CarMoving.mp4" autoplay loop width="600px"></video> -->
+                </div>
+                <div class="row">
+                    <div class="booking-form">
+                        <div class="container">
+                        <form class="form">
+    
+                            <div class="containerMaps">
+    
+                                <div class="rowsMap row">
+    
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+    
+                                            <input type="text" class="form-control" placeholder="Pick up location"
+                                                id="pickup-location-input" />
+                                        </div>
+                                    </div>
+    
+                                    <!-- MAP 1 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="card-container">
+                                                <div class="map" id="gmp-map1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+    
+                                <div class="rowsMap row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+    
+                                            <input class="form-control" type="text" placeholder="Drop off location"
+                                                id="dropoff-location-input">
+                                        </div>
+                                    </div>
+    
+                                    <!-- MAP 2 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="card-container">
+                                                <div class="map" id="gmp-map2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="row emailAndName">
+    
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" id="name" type="name" placeholder="Your full name"
+                                            required>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-6">
+                                    <div class="form-group">
+    
+                                        <input class="form-control" id="email" type="email" placeholder="Your email">
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                            <div class="row telDateSelect">
+    
+                                <div class="telAndSelect">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+        
+                                            <input class="form-control" id="tel" type="tel" placeholder="Your phone" required>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+        
+                                            <select class="form-control" id="selectPassengers" required>
+                                                <option value="" disabled selected>Passengers</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="dates">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <input class="form-control" id="pickUpDate" type="date" required>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+        
+                                            <input class="form-control" id="pick-up-time" type="time" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+    
+                            </div>
+    
+                            <div class="row annotattionRow">
+                                <div class="col-md-12">
+                                    <div class="form-group-text">
+    
+                                        <input class="form-control" id="additionalRemarks" aria-label="With textarea"
+                                            placeholder="Write something to consider"></input>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="row buttonReserveRow">
+                                <div class="col-md-2">
+                                    <div class="form-btn">
+                                        <button class="submit-btn" type="button">reserve</button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </form>
+                    </div>
+                    </div>
+            </div>
+    
+    
+            </div>
+    
+        </section>
+    
+        <section class="about" id="section3">
+            <div class="aboutInfo">
+                <img src="/img/driver.jpg">
+                <div class="about-text">
+                    <h1>About Me</h1>
+                    <h5>Vinny <span>Driving Service</span></h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eius odit, qui itaque rem ad molestiae explicabo ipsum debitis et quam, fugit placeat quidem fugiat id laudantium temporibus saepe maiores.</p>
+                    <a href="#section2"  class="button">Reserve</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+   
     <footer>
         <div class="footerContainer">
             <div class="socialIcons">
@@ -40,9 +208,9 @@
                 <a href="#"><i class="fa-brands fa-tiktok"></i></a>
             </div>
             <div class="footerNav">
-                <ul><li><a href="index.html">Home</a></li>
-                    <li><a href="/reserve.html">Reserve</a></li>
-                    <li><a href="/about.html">About Me</a></li>
+                <ul><li><a href="#section1">Home</a></li>
+                    <li><a href="#section2">Reserve</a></li>
+                    <li><a href="#section3">About Me</a></li>
                 </ul>
             </div>
             
@@ -51,8 +219,35 @@
             <p>Copyright &copy;2024 - Designed by <span class="designer"><a class="designer" href="#">Daniel Parra</a></span></p>
         </div>
     </footer>
-
     
-    
+	<script src="/app/app.js"></script>
+	<script src="/app/map.js"></script>
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script>
+		(function () {
+			emailjs.init("mu70TjnEkweBD3L8T");
+		})();
+	</script>
+	<script src="/app/email.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOKj95rXV_Y2rogJcHRCRc9H8QWN1Zxlw&libraries=places,marker&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC"
+		async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $('a').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 200, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+        </script>
+        
 </body>
 </html>

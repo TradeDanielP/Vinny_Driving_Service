@@ -1,41 +1,24 @@
-body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	background-color: rgb(10, 10, 10);
-	font-family: 'Poppins', sans-serif;
-}
-
-
-.hero{
+.reserve{
     width: 100%;
-    height: 100vh;
     position: relative;
-    padding: 0 5%;
     display: flex;
     align-items: center;
     justify-content: center;
+	padding: 200px 0;
+    background-color: rgba(10, 10, 10,0.5);
   }
 
 .car {
 	z-index: -10;
+	padding: 5%;
 }
 
-.bg {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background-size: contain;
-	right: 0;
-	bottom: 0;
-	opacity: 5%;
-}
 
 #booking {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .container{
@@ -61,19 +44,19 @@ body {
 }
 
 .booking-form .form-control::-webkit-input-placeholder {
-	color: rgba(82, 82, 84, 0.4);
+	color: rgba(0, 0, 0, 1);
 }
 
 .booking-form .form-control:-ms-input-placeholder {
-	color: rgba(82, 82, 84, 0.4);
+	color: rgba(0, 0, 0, 1);
 }
 
 .booking-form .form-control::placeholder {
-	color: rgba(82, 82, 84, 0.4);
+	color: rgba(0, 0, 0, 1);
 }
 
 .booking-form input[type="date"].form-control:invalid {
-	color: rgba(82, 82, 84, 0.4);
+	color: rgba(0, 0, 0, 1);
 }
 
 .booking-form select.form-control {
@@ -149,41 +132,84 @@ body {
 	border-radius: 5px;
 }
 
+@media only screen and (min-width: 1200px){
 
-@media (max-aspect-ratio: 16/9){
-	nav{
-		padding: 72px 5%;
-		justify-content: center;
-	}
-    nav .logo{
-        width: 220px;
-      }
-	nav ul{
-		padding: 0;
-	}
-    nav ul li{
-        margin-left: 50px;
-      }
-      nav ul li a{
-        font-size: 270%;
-      }
-  }
+.containerMaps{
+	gap: 1%;
+    display: flex;
+	margin: 0 1%;
+}
+.emailAndName{
+	gap: 1%;
+    display: flex;
+}
+
+.telDateSelect{
+	gap: 1%;
+    display: flex;
+	width: 100%;
+}
+
+.telAndSelect{
+	gap: 1%;
+    display: flex;
+	width: 100%;
+}
+
+.col-md-3{
+	width: 100%;
+}
+
+.dates{
+	gap: 1%;
+    display: flex;
+	width: 100%;
+}
+
+.annotattionRow{
+	gap: 1%;
+    display: flex;
+}
+
+.buttonReserveRow{
+	gap: 1%;
+    display: flex;
+}
+
+}
+	
+
 
 /* Responsive para telefonos 600px */
 @media only screen and (max-width: 1200px) {
+
+	.reserve{
+		padding: 20px 0;
+	}
+
 	#booking {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 	}
+
+	.car{
+		width: 100%;
+	}
+
+	.container{
+		width: 100%;
+	}
 	.card-container{
 		height: 300px;
+
 	}
 
 	.booking-form .form-control{
-		font-size: 24px;
+		font-size: 10px;
 	}
 	.booking-form .submit-btn{
-		font-size: 24px;
+		font-size: 15px;
 	}
 
 	.containerMaps {

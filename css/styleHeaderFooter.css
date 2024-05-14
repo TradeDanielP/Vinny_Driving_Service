@@ -1,5 +1,4 @@
 /* Header */
-
 nav{
     width: 100%;
     position: absolute;
@@ -25,7 +24,14 @@ nav{
     text-decoration: none;
     color: white;
     font-size: 17px;
+    transition: all 0.1s ease;
   }
+
+  nav ul li a:hover{
+    -webkit-text-stroke: 1.5px white;
+    color: white;
+  }
+
 
   @media (max-aspect-ratio: 16/9){
     .content h1{
@@ -118,7 +124,7 @@ footer{
 }
 
   /* Media Query Footer */
-  @media (max-width: 700px){
+  @media (max-width: 768px){
     .footerNav ul{
         flex-direction: column;
     } 
