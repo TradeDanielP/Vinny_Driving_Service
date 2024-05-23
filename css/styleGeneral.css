@@ -16,16 +16,12 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
 }
 
-a:hover{
-    color: aqua;
-}
 
+@media screen and (max-width: 575.98px) and (orientation: portrait) {
 
-@media (max-width: 768px){
-
-    
 
 }
-

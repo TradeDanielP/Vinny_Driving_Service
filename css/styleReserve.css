@@ -1,18 +1,22 @@
-.reserve{
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.reserve {
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 200px 0;
-    background-color: rgba(10, 10, 10,0.5);
-  }
+	background-color: rgba(10, 10, 10, 0.8);
+}
 
 .car {
 	z-index: -10;
 	padding: 5%;
+    transition: transform 0.3s ease-in-out;
 }
 
+.car:hover{
+    transform: scale(1.1);
+}
 
 #booking {
 	display: flex;
@@ -21,7 +25,7 @@
 	justify-content: space-between;
 }
 
-.container{
+.container {
 	width: 900px;
 }
 
@@ -132,59 +136,64 @@
 	border-radius: 5px;
 }
 
-@media only screen and (min-width: 1200px){
-
-.containerMaps{
-	gap: 1%;
-    display: flex;
-	margin: 0 1%;
-}
-.emailAndName{
-	gap: 1%;
-    display: flex;
+.buttonReserveRow {
+	margin-top: 20px;
 }
 
-.telDateSelect{
-	gap: 1%;
-    display: flex;
-	width: 100%;
+@media only screen and (min-width: 1200px) {
+
+	.containerMaps {
+		gap: 1%;
+		display: flex;
+		margin: 0 1%;
+	}
+
+	.emailAndName {
+		gap: 1%;
+		display: flex;
+	}
+
+	.telDateSelect {
+		gap: 1%;
+		display: flex;
+		width: 100%;
+	}
+
+	.telAndSelect {
+		gap: 1%;
+		display: flex;
+		width: 100%;
+	}
+
+	.col-md-3 {
+		width: 100%;
+	}
+
+	.dates {
+		gap: 1%;
+		display: flex;
+		width: 100%;
+	}
+
+	.annotattionRow {
+		gap: 1%;
+		display: flex;
+	}
+
+	.buttonReserveRow {
+		gap: 1%;
+		display: flex;
+	}
+
 }
 
-.telAndSelect{
-	gap: 1%;
-    display: flex;
-	width: 100%;
-}
-
-.col-md-3{
-	width: 100%;
-}
-
-.dates{
-	gap: 1%;
-    display: flex;
-	width: 100%;
-}
-
-.annotattionRow{
-	gap: 1%;
-    display: flex;
-}
-
-.buttonReserveRow{
-	gap: 1%;
-    display: flex;
-}
-
-}
-	
 
 
 /* Responsive para telefonos 600px */
-@media only screen and (max-width: 1200px) {
 
-	.reserve{
-		padding: 20px 0;
+@media screen and (max-width: 575.98px) and (orientation: portrait) {
+	.reserve {
+		padding: 20px 0; 
 	}
 
 	#booking {
@@ -193,49 +202,32 @@
 		flex-direction: column;
 	}
 
-	.car{
+	.car {
+		width: 100%
+	}
+
+	.container {
 		width: 100%;
 	}
 
-	.container{
+	input{
 		width: 100%;
 	}
-	.card-container{
-		height: 300px;
 
+	#map{
+		font-size: 1px;
 	}
 
-	.booking-form .form-control{
-		font-size: 10px;
+	.booking-form .form-control {
+		font-size: 17px;
 	}
-	.booking-form .submit-btn{
-		font-size: 15px;
+
+	.buttonReserveRow {
+		text-align: center;
 	}
 
 	.containerMaps {
 		flex-wrap: wrap;
 	}
 
-	.col-md-12{
-		padding: 0;
-	}
-/* 
-	.emailAndName{
-		display: flex;
-		justify-content: space-around;
-	}
-	
-	.telDateSelect{
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.telAndSelect{
-		display: flex;
-	}
-
-	.dates{
-		display: flex;
-	} */
 }

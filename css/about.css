@@ -1,24 +1,75 @@
-.about{
+.about, .aboutResponsive {
     width: 100%;
-    height: 100vh;
     position: relative;
+    padding: 100px 0 0 0 ;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(10, 10, 10,0.5);
+    overflow: hidden;
+    background-color: rgba(10, 10, 10, 0.8);
 }
 
-.about img{
+.aboutResponsive{
+    display: none;
+}
+
+.about img, .aboutResponsive img {
     height: auto;
     width: 420px;
     border-radius: 15px;
+    max-width: 100%;
+    transform-origin: center;
+    transition: transform 0.6s ease-in-out;
 }
 
-.about-text{
+.about img:hover, .vinny:hover {
+    transform: scale(1.1);
+}
+
+.carPhoto img{
+    transform: scale(1.2); 
+    
+}
+
+.carPhoto img:hover{
+    transform: scale(1.4); 
+}
+
+
+
+article {
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+  
+article img {
+    max-width: 100%;
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+}
+  
+
+figure {
+    width: 100%;
+    overflow: hidden;
+}
+
+figure img {
+    overflow: hidden;
+    object-fit: contain;
+}
+
+
+
+
+
+.about-text {
     width: 550px;
 }
 
-.aboutInfo{
+.aboutInfo {
     width: 1130px;
     max-width: 95%;
     margin: 0 auto;
@@ -27,59 +78,90 @@
     justify-content: space-around;
 }
 
-.about-text h1{
+.about-text h1 {
     color: white;
     font-size: 80px;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
 
-.about-text h5{
-   color: white;
-   font-size: 25px;
-   text-transform: capitalize;
-   margin-bottom: 25px;
-   letter-spacing: 2px;
+.about-text h5 {
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
 }
 
-span{
+span {
     color: rgb(0, 0, 0);
     font-weight: 600;
 }
 
-.about-text p{
+.about-text p {
     color: rgb(255, 255, 255);
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
-    margin-bottom: 45px;
+    margin: 30px 0;
 }
 
-.button{
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 5px;
-    transition: .4s;
-}
-
-.button:hover{
-    background: transparent;
-    color: white;
-    border: 2px solid rgb(0, 0, 0);
+.buttonEffectt {
+    text-align: center;
+    display: inline-block;
+    color: #fff;
     cursor: pointer;
-}
+    font-size: 1rem;
+    line-height: 2.5rem;
+    max-width: 160px;
+    width: 100%;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 1s ease-in;
+  }
+  
+  .buttonEffectt svg {
+    height: 40px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .buttonEffectt rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 450, 0;
+    transition: all 0.7s linear;
+  }
+  
+  .buttonEffectt:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 20, 300;
+    stroke-dashoffset: 48;
+    stroke: #ffffff;
+    transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
+  }
 
-@media (max-width: 768px) {
+
+
+@media screen and (max-width: 575.98px) and (orientation: portrait) {
+    .aboutResponsive{
+        display: block;
+    }
+    .about{
+        display: none;
+    }
     .aboutInfo {
         flex-direction: column;
         align-items: center;
     }
 
-    .about img {
+    .about img, .aboutResponsive img {
         width: 100%;
         max-width: 300px;
     }
