@@ -13,6 +13,9 @@
 .aboutResponsive{
     display: none;
 }
+.aboutResponsivelink{
+    display: none;
+}
 
 .about img, .aboutResponsive img {
     height: auto;
@@ -67,6 +70,7 @@ figure img {
 
 .about-text {
     width: 550px;
+    margin: 0 10px;
 }
 
 .aboutInfo {
@@ -153,7 +157,13 @@ span {
     .aboutResponsive{
         display: block;
     }
+    .aboutResponsivelink{
+        display: block;
+    }
     .about{
+        display: none;
+    }
+    .aboutlink{
         display: none;
     }
     .aboutInfo {

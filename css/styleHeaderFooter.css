@@ -4,10 +4,11 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 20px 8%;
+    gap: 5%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 nav .logo {
@@ -17,7 +18,11 @@ nav .logo {
 nav ul li {
     list-style: none;
     display: inline-block;
-    margin-left: 40px;
+}
+
+ul{
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -33,22 +38,31 @@ nav ul li a:hover {
     transition: all 1s ease;
 }
 
+
+@media screen and (min-width: 740) and (max-width: 991.99px) and (orientation: portrait) {
+    nav ul li a {
+        font-size: 65%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 739.99px) and (orientation: portrait) {
+    nav ul li a {
+        font-size: 55%;
+    }
+}
+
 /* MEDIDAS PARA CELULAR VERTICAL */
-@media screen and (max-width: 575.98px) and (orientation: portrait) {
+@media screen and (min-width: 392px) and (max-width: 575.99px) and (orientation: portrait) {
     nav{
         padding: 20px 5px;
     }
    
     nav .logo {
-        width: 40px;
-    }
-
-    nav ul li {
-        margin-left: 5px;
+        width: 60px;
     }
 
     nav ul li a {
-        font-size: 50%;
+        font-size: 60%;
     }
 
     nav ul li a:hover {
@@ -57,7 +71,32 @@ nav ul li a:hover {
     }
 }
 
+@media screen and (max-width: 391.99px) and (orientation: portrait) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 5px;
+    }
+   
+    nav .logo {
+        width: 60px;
+    }
+    
+    ul{
+        display: flex;
+        margin-top: 10px;
+        gap: 35px;
+    }
 
+    nav ul li a {
+        font-size: 55%;
+    }
+
+    nav ul li a:hover {
+        -webkit-text-stroke: 1px white;
+        transition: all 1s ease;
+    }
+}
 
 /* Footer */
 

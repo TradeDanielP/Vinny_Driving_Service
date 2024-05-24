@@ -94,6 +94,39 @@ textarea::-webkit-scrollbar-thumb {
     opacity: 0.7;
 }
 
+/* Responsive para Tablets */
+/* Vertical */
+@media screen and (min-width: 576px) and (max-width: 991.99px) and (orientation: portrait) {
+    .contact form {
+        width: 95%;
+    }
+
+    .contact form input {
+        width: 90%;
+    }
+
+    .contact h1 {
+        font-size: 25px;
+    }
+
+    .contact form textarea {
+        width: 90%;
+    }
+
+    .contact h4 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .contact form #lastName,
+    .contact form #mobile {
+        margin-left: 0px;
+    }
+    .contact form #button{
+        margin-right: 0;
+    }
+  }
+
 @media screen and (max-width: 575.98px) and (orientation: portrait) {
     .contact form {
         width: 95%;

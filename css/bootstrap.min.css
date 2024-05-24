@@ -1972,9 +1972,9 @@ pre code {
     margin-left: auto
 }
 
-@media (min-width:768px) {
+@media (min-width:577px) {
     .container {
-        width: 750px
+        width: 550px
     }
 }
 

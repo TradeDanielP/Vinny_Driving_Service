@@ -22,7 +22,7 @@
 }
 
 .content h1 {
-  font-size: 140px;
+  font-size: 135px;
   color: white;
   font-weight: 600;
   -webkit-text-stroke: 2px white;
@@ -76,6 +76,14 @@
 }
 
 /* Media Query */
+
+/* Responsive para Tablets */
+/* Vertical */
+@media screen and (min-width: 576px) and (max-width: 991.99px) and (orientation: portrait) {
+	.content h1{
+        font-size: 60px;
+    }
+  }
 
 @media screen and (max-width: 575.98px) and (orientation: portrait) {
   .content h1 {
