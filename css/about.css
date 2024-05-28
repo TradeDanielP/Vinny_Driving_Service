@@ -61,7 +61,7 @@ figure img {
 
 
 .about-text {
-    width: 850px;
+    width: 70%;
     margin: 0 10px;
     text-align: justify;
 }
@@ -104,7 +104,7 @@ span {
     margin: 30px 0;
 }
 
-
+/* MEDIDAS PARA CELULAR Y TABLET VERTICAL */
 @media screen and (min-width: 576px) and (max-width: 991.99px) and (orientation: portrait) {
 
     .about-text {
@@ -112,7 +112,6 @@ span {
     }
 
 }
-
 
 @media screen and (max-width: 575.98px) and (orientation: portrait) {
 
@@ -143,5 +142,35 @@ span {
     .about-text p {
         font-size: 16px;
     }
+
+}
+
+/* MEDIDAS PARA CELULAR Y TABLET HORIZONTAL */
+@media screen and (max-width: 879.99px) and (max-height: 605px) and (orientation: landscape) {
+
+    .aboutInfo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about img, .aboutResponsive img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+    .about-text h1 {
+        font-size: 40px;
+    }
+
+    .about-text h5 {
+        font-size: 20px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
 
 }

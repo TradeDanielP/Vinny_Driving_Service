@@ -68,6 +68,7 @@
     background-color: #4d4d4d;
 }
 
+/* MEDIDAS PARA CELULAR Y TABLET VERTICAL */
 @media screen and (min-width: 576px) and (max-width: 991.99px) and (orientation: portrait) {
 
     .titleTestimonials h2{
@@ -97,4 +98,21 @@
     .testimonial p{
         margin: 0 10px;
     }
+}
+
+/* MEDIDAS PARA CELULAR Y TABLET HORIZONTAL */
+@media screen and (max-width: 879.99px) and (max-height: 605px) and (orientation: landscape) {
+
+    .titleTestimonials h2{
+        font-size: 180%;
+    }
+
+    .testimonial{
+        font-size: 80%;
+    }
+
+    .testimonial p{
+        margin: 0 10px;
+    }
+
 }
