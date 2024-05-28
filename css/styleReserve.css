@@ -4,19 +4,63 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 200px 0;
-	background-color: rgba(10, 10, 10, 0.8);
+	padding: 100px 0;
+	background-color: white;
 }
 
-.car {
-	z-index: -10;
-	padding: 5%;
-	transition: transform 0.3s ease-in-out;
+input{
+	border: 1px solid rgb(204, 204, 204);
 }
 
-.car:hover {
-	transform: scale(1.1);
-}
+
+.buttonEffectt {
+    text-align: center;
+    display: inline-block;
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    max-width: 160px;
+    width: 100%;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in;
+  }
+  
+  .buttonEffectt svg {
+    height: 40px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .buttonEffectt rect {
+    fill: none;
+    stroke: rgb(34, 34, 34);
+    stroke-width: 5;
+    stroke-dasharray: 450, 0;
+    transition: all 0.5s linear;
+  }
+
+  .buttonEffectt:hover {
+	color: rgb(34, 34, 34);
+  }
+  
+  .buttonEffectt:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 20, 300;
+    stroke-dashoffset: 48;
+    stroke: rgb(34, 34, 34);
+	background-color: rgb(34, 34, 34);
+	color: rgb(34, 34, 34);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.25, 1);
+  }
+
+
 
 /* Responsive para Laptos y Pc */
 @media only screen and (min-width: 1576px) {
@@ -45,6 +89,7 @@
 		font-weight: 400;
 		-webkit-box-shadow: none;
 		box-shadow: none;
+		border: 1px solid rgba(34, 34, 34, 0.3);
 		border-radius: 5px;
 		padding: 0px 25px;
 	}
@@ -216,6 +261,7 @@
 		font-weight: 400;
 		-webkit-box-shadow: none;
 		box-shadow: none;
+		border: 1px solid rgba(34, 34, 34, 0.3);
 		border-radius: 5px;
 		padding: 0px 25px;
 	}
@@ -372,9 +418,6 @@
 		margin-top: 20px;
 	}
 
-	.container {
-		width: 100%;
-	}
 
 }
 
@@ -389,12 +432,12 @@
 		flex-direction: column;
 	}
 
-	.car {
-		width: 100%
-	}
-
 	.container {
 		width: 400px;
+	}
+
+	form{
+		padding: 6%;
 	}
 
 	input {
@@ -423,13 +466,14 @@
 
 @media screen and (max-width: 391.99px) and (orientation: portrait) {
 
+	form{
+		padding: 10%;
+	}
+
 	.reserve {
 		padding: 10px 0;
 	}
 
-	.car {
-		width: 100%;
-	}
 
 	.container {
 		width: 100%;

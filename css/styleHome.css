@@ -1,54 +1,78 @@
 .home {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
-  padding: 0 5%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+	background-color: white;
 }
 
+.car {
+  transition: transform 0.2s ease-in-out;
+  margin-top: 50px;
+}
+
+.car:hover {
+  transform: scale(1.1);
+}
+
+.videoCar {
+  width: 100%;
+}
 
 .backVideo {
-  position: absolute;
+  width: 100%;
+  display: block;
   background-size: cover;
   right: 0;
   bottom: 0;
+  padding: 0;
   z-index: -1;
 }
 
+
 .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .content h1 {
-  font-size: 135px;
-  color: white;
-  font-weight: 600;
-  -webkit-text-stroke: 2px white;
-  transition: all 0.5s ease;
+  font-size: 110px;
+  color: rgb(34, 34, 34);
+  font-weight: 700;
+  -webkit-text-stroke: 2px rgb(34, 34, 34);
+  transition: all 0.2s ease;
+  margin-bottom: 50px;
 }
 
 .content h1:hover {
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 2px rgb(34, 34, 34);
   color: transparent;
 }
 
+.content h2 {
+  color: rgb(68, 68, 68);
+}
+
 .buttonEffect {
-  margin-top: 100px;
+  margin: 120px 0;
   display: inline-block;
-  color: #fff;
+  color: rgb(34, 34, 34);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 2rem;
   line-height: 2.5rem;
-  max-width: 160px;
+  max-width: 250px;
   width: 100%;
   letter-spacing: 0.3rem;
   font-weight: 600;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 1s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .buttonEffect svg {
@@ -61,18 +85,24 @@
 
 .buttonEffect rect {
   fill: none;
-  stroke: #fff;
-  stroke-width: 2;
+  stroke: rgb(34, 34, 34);
+  stroke-width: 5;
   stroke-dasharray: 450, 0;
-  transition: all 0.7s linear;
+  transition: all 0.5s linear;
+}
+
+.buttonEffect:hover {
+  color: rgb(34, 34, 34);
 }
 
 .buttonEffect:hover rect {
   stroke-width: 5;
-  stroke-dasharray: 20, 300;
+  stroke-dasharray: 20, 427;
   stroke-dashoffset: 48;
-  stroke: #ffffff;
-  transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
+  stroke: rgb(34, 34, 34);
+  background-color: rgb(34, 34, 34);
+  color: rgb(34, 34, 34);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.25, 1);
 }
 
 /* Media Query */
@@ -80,41 +110,43 @@
 /* Responsive para Tablets */
 /* Vertical */
 @media screen and (min-width: 576px) and (max-width: 991.99px) and (orientation: portrait) {
-	.content h1{
-        font-size: 60px;
-    }
+  
+  .content{
+    margin-top: 50px;
+  }
+  
+  .content h1 {
+    font-size: 60px;
   }
 
+  .car {
+		width: 80%;
+	}
+}
+
 @media screen and (max-width: 575.98px) and (orientation: portrait) {
+  
+
+  .content{
+    margin-top: 50px;
+  }
+  
   .content h1 {
     font-size: 45px;
     font-weight: 500;
-    -webkit-text-stroke: 0px white;
-    transition: all 0.5s ease;
+    -webkit-text-stroke: 0px rgb(34, 34, 34);
   }
 
   .content h1:hover {
-    -webkit-text-stroke: 1px white;
-    color: transparent;
+    -webkit-text-stroke: 1px rgb(34, 34, 34);
   }
+
+  .car {
+		width: 90%;
+	}
 
   .buttonEffect {
     font-size: 12px;
   }
-}
 
-
-@media (min-aspect-ratio: 16/9) {
-  .backVideo {
-    width: 100%;
-    height: auto;
-  }
-
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .backVideo {
-    width: auto;
-    height: 100%;
-  }
 }

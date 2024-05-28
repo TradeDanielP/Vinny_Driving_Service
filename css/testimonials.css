@@ -1,0 +1,100 @@
+.testimonials-section {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 180px 20px;
+    color: white;
+    background-color: rgb(34, 34, 34);
+}
+
+.titleTestimonials{
+    margin-bottom: 100px;
+}
+
+.titleTestimonials h2 {
+    margin: 0;
+    font-size: 80px;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative; /* Added for positioning */
+    height: 300px; /* Adjust according to content */
+}
+
+.testimonial {
+    max-width: 800px;
+    margin-bottom: 40px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out; /* Smooth transition */
+}
+
+.testimonial.active {
+    opacity: 1;
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+.author {
+    font-size: 1em;
+    color: #aaa;
+    margin: 20px 20px 0px 20px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #4d4d4d;
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.99px) and (orientation: portrait) {
+
+    .titleTestimonials h2{
+        font-size: 380%;
+    }
+
+    .testimonial{
+        font-size: 120%;
+    }
+
+    .testimonial p{
+        margin: 0 10px;
+    }
+
+}
+
+@media screen and (max-width: 575.98px) and (orientation: portrait) {
+
+    .titleTestimonials h2{
+        font-size: 180%;
+    }
+
+    .testimonial{
+        font-size: 80%;
+    }
+
+    .testimonial p{
+        margin: 0 10px;
+    }
+}

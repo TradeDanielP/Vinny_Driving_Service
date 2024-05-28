@@ -1,0 +1,231 @@
+.carInfo hr{
+    border: solid 1px rgb(0, 204, 255);
+    width: 5%;
+}
+
+.carInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(34, 34, 34);
+    margin-top: 100px;
+	background-color: white;
+}
+
+.carInfo h2{
+    font-size: 50px;
+}
+
+.carInfo h5{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing:  4px;
+    color: #666;
+}
+
+.car-image img {
+    height: auto;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1050px;
+    padding: 20px;
+    gap: 30px;
+}
+
+.carousel {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+.carousel-container {
+    border-radius: 8px;
+    overflow: hidden; /* Hide the overflowing part of the image */
+}
+
+.carousel img {
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel img:hover {
+    transform: scale(1.1); /* Zoom in the image on hover */
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 20%;
+}
+
+.carousel-button:hover{
+    opacity: 100%;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #333;
+}
+
+.info {
+    text-align: left;
+    width: 80%;
+}
+
+.info h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.info p {
+    margin: 10px 0;
+    color: #666;
+    text-align: justify;
+}
+
+.book-now {
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    color: rgb(34, 34, 34);
+    border: solid rgb(34, 34, 34) 2px;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.book-now:hover {
+    color: white;
+    background: rgb(34, 34, 34);
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.99px) and (orientation: portrait) {
+
+    .carousel-container{
+        height: 500px;
+    }
+    
+    .carousel-container img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .carInfo{
+        text-align: center;
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    .carInfo h2{
+        font-size: 220%;
+    }
+
+    .carInfo hr{
+        width: 40%;
+    }
+
+    .carInfo h5{
+        font-size: 140%;
+    }
+
+    .details{
+        flex-direction: column;
+        padding: 0 0 100px 0;
+        width: 100%;
+        gap: 10px;
+    }
+    .car-image img {
+        width: 60%;
+    }
+    .carousel{
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 575.98px) and (orientation: portrait) {
+
+    .carousel-container{
+        height: 250px;
+    }
+    
+    .carousel-container img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .carInfo{
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .carInfo h2{
+        font-size: 130%;
+    }
+
+    .carInfo hr{
+        width: 30%;
+    }
+
+    .carInfo h5{
+        font-size: 120%;
+    }
+
+    .details{
+        flex-direction: column;
+        padding: 0 0 100px 0;
+        width: 100%;
+        gap: 10px;
+    }
+    .car-image img {
+        width: 60%;
+    }
+    .carousel{
+        width: 90%;
+    }
+
+}

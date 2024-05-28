@@ -7,18 +7,22 @@
     <title>Vinny Professional Driving Service | Home</title>
     <link rel="icon" href="/img/car.png" type="image/x-icon">
 
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="/app/headerEffect.js"></script>
     <script src="/map/mapbox.js"></script>
     <script src="/map/mapboxdirections.js"></script>
     <link rel="stylesheet" href="/css/styleGeneral.css">
     <link rel="stylesheet" href="/css/styleHeaderFooter.css">
     <link rel="stylesheet" href="/css/styleHome.css">
-    <link rel="stylesheet" href="/css/styleReserve.css">
     <link rel="stylesheet" href="/css/about.css">
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/carInfo.css">
+    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/css/keyBenefits.css">
+    <link rel="stylesheet" href="/css/testimonials.css">
+    <link rel="stylesheet" href="/css/styleReserve.css">
     <link rel="stylesheet" href="/map/mapLibrary1.css">
     <link rel="stylesheet" href="/map/mapLibrary2.css">
     <link rel="stylesheet" href="/map/stylesMap.css">
-    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,41 +33,266 @@
 
 <body>
 
+    <header>
+        <nav class="navHeader" data-aos="fade-down">
+            <h2 class="title">Vinny Driving Professional Service</h2>
+            <ul class="ulHeader">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#reserve">RESERVE</a></li>
+                <li class="aboutlink"><a href="#aboutme">ABOUT ME</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
     <div class="page">
 
-        <header class="home" id="home">
-            <video autoplay loop muted plays-inline class="backVideo">
-                <source src="/video/carVinny.mp4" type="video/mp4">
-            </video>
-
-            <nav data-aos="fade-down">
-                <img src="/img/car.png" class="logo" alt="logo">
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#reserve">RESERVE</a></li>
-                    <li class="aboutlink"><a href="#aboutme">ABOUT ME</a></li>
-                    <li class="aboutResponsivelink"><a href="#aboutmeResponsive">ABOUT ME</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav>
+        <div class="home" id="home">
 
             <div class="content" data-aos="zoom-in">
-                <h1>Vinny Driving Professional Service</h1>
+
+                <div class="car" data-aos="fade-right">
+                    <img class="car" src="/img/carMain.png" width="800px" alt="car">
+                </div>
+
+                <h1>Executive Chauffeur Service</h1>
+                <h2>High-End Transportation Solutions</h2>
                 <a class='buttonEffect' href="#reserve">
                     <svg>
                         <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                    </svg>Reserve
+                    </svg>Book Now
                 </a>
             </div>
-        </header>
+
+            <div class="videoCar">
+                <video autoplay loop muted plays-inline class="backVideo">
+                    <source src="/video/videoCar.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        
 
         <main class="mainSection">
 
-            <section class="reserve" id="reserve" >
-                <div id="booking">
-                    <div class="videoCar" data-aos="fade-right">
-                        <img class="car" src="/img/car.png" width="400px" alt="car">
+            <section class="about" id="aboutme">
+                <div class="aboutInfo">
+                    <h1>About Me</h1>
+                    <article data-aos="fade-right">
+                        <figure>
+                            <img src="/img/vinny.JPG" alt="Vinny">
+                        </figure>
+                    </article>
+                    <div class="about-text" data-aos="fade-left">
+                        <p>Hello, I'm <span>Vincent</span>, I've been driving professionally for about 18 years, starting my career
+                            in New York and now serving the Nashville area. Throughout my career, I've had the privilege
+                            of transporting a diverse range of clients, from CEOs and rockstars to regular people like
+                            myself. No matter who you are, I am committed to providing top-notch, first-class service to
+                            everyone.</p>
+                        <p>My aim is to ensure your complete satisfaction and make your journey as comfortable and
+                            enjoyable as possible. I take pride in offering the same high-quality service to all my
+                            clients, ensuring that every ride is a pleasant and memorable experience.</p>
+                        <p> I hold all the necessary documents and certifications, including airport decals for both
+                            inside and outside pick-ups. Whether you need to be picked up from the inside terminal or
+                            the designated limo area, I have it covered. You can trust me to handle your transportation
+                            needs with the utmost professionalism and care.</p>
+                        <p>Thank you for considering my services. I look forward to driving you soon!</p>
                     </div>
+                </div>
+            </section>
+
+            <section class="carInfo">
+
+                <h2>2019 Lincoln Continental Reserve</h2>
+                <hr>
+                <h5>A CLEAN AND COMFORTABLE CORPORATE Lincoln </h4>
+
+                    <div class="car-image">
+                        <img src="/img/carMain.png" width="600px" alt="Car">
+                    </div>
+
+                    <div class="details">
+
+                        <div class="carousel">
+                            <div class="carousel-container">
+                                <img src="/img/slider/slider1.jpg" width="500px" alt="Interior Image"
+                                    class="carousel-image">
+                                <img src="/img/slider/slider2.jpg" width="500px" alt="Interior Image"
+                                    class="carousel-image" style="display: none;">
+                                <img src="/img/slider/slider3.jpg" width="500px" alt="Interior Image"
+                                    class="carousel-image" style="display: none;">
+                                <img src="/img/slider/slider4.jpg" width="500px" alt="Interior Image"
+                                    class="carousel-image" style="display: none;">
+                                <img src="/img/slider/slider5.jpg" width="500px" alt="Interior Image"
+                                    class="carousel-image" style="display: none;">
+                                <img src="/img/slider/slider6.jpg" width="500px" alt="Interior Image"
+                                    class="carousel-image" style="display: none;">
+                            </div>
+                            <button class="carousel-button prev-button">&lt;</button>
+                            <button class="carousel-button next-button">&gt;</button>
+
+                            <div class="carousel-indicators">
+                                <span class="indicator active" data-index="0"></span>
+                                <span class="indicator" data-index="1"></span>
+                                <span class="indicator" data-index="2"></span>
+                                <span class="indicator" data-index="3"></span>
+                                <span class="indicator" data-index="4"></span>
+                                <span class="indicator" data-index="5"></span>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <h3>Capacity</h3>
+                            <p>Maximum Passengers: 4 Maximum Luggage: 3</p>
+                            <h3>Style</h3>
+                            <p>Our Business Lincoln Continental has comfortable legroom and superior trunk space. Most
+                                of all
+                                you can rely on a smooth and safe ride to take you where you want to go.</p>
+                            <h3>Availability</h3>
+                            <p>Throughout most major cities globally</p>
+                            <button class="book-now">BOOK NOW</button>
+                        </div>
+
+                    </div>
+
+            </section>
+
+            <section class="services-container">
+                <div class="service-card">
+                    <h3>Executive Corporate Travel</h3>
+                    <p>Professional solutions for corporate travelers.</p>
+                    <hr>
+                </div>
+                <div class="service-card">
+                    <h3>High-end Roadshow Transportation</h3>
+                    <p>Specialist roadshow and tour transportation services.</p>
+                    <hr>
+                </div>
+                <div class="service-card">
+                    <h3>Door-to-door Chauffeur Services</h3>
+                    <p>Convenient, customized travel services.</p>
+                    <hr>
+                </div>
+                <div class="service-card">
+                    <h3>Bespoke On-Demand Luxury Travel</h3>
+                    <p>Personalized service to meet your needs.</p>
+                    <hr>
+                </div>
+                <div class="service-card">
+                    <h3>Premium Airport Transfers</h3>
+                    <p>The most comfortable way to start or end your journey.</p>
+                    <hr>
+                </div>
+                <div class="service-card">
+                    <h3>Sophisticated Event Transportation Solutions</h3>
+                    <p>Expertly executed event transportation.</p>
+                    <hr>
+                </div>
+            </section>
+
+            <section class="keyBenefits">
+
+               <!--  <h2>Key Benefits</h2> -->
+
+                <div class="feature">
+                    <i class="fa fa-user fa-3x fa-fw"></i>
+                    <h3>Account Representative</h3>
+                    <p>A truly personalized experience based around your preferences.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa fa-stopwatch fa-3x fa-fw"></i>
+                    <h3>Faster Booking Process</h3>
+                    <p>Never wait on hold to book a reservation again!</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-regular fa-window-restore fa-3x fa-fw"></i>
+                    <h3>Clear & Transparent Billing</h3>
+                    <p>All-inclusive pricing takes the guess work out of budgeting.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-shield-halved fa-3x fa-fw"></i>
+                    <h3>Safe | Comfortable Ride</h3>
+                    <p>Extended leg, and head room with advanced safety features makes for a stress-free and comfortable
+                        ride.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa fa-mobile-screen fa-3x fa-fw"></i>
+                    <h3>Advanced Technology</h3>
+                    <p>See your chauffeur details, and track your assigned vehicle in real time. Our powerful technology
+                        streamlines information and puts you in "The Know".</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa fa-wallet fa-3x fa-fw"></i>
+                    <h3>Cost Effective Options</h3>
+                    <p>We design a program around Your budget, giving you control.</p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa fa-graduation-cap fa-3x fa-fw"></i>
+                    <h3>PAX Certified Chauffeurs</h3>
+                    <p>Our chauffeurs go through advanced customer service training designed by Ritz Carlton Concierge.
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa fa-earth fa-3x fa-fw"></i>
+                    <h3>Events? Busses? Group Travel?</h3>
+                    <p>We have you covered with a full service fleet that can provide coverage for any need you might
+                        have.</p>
+                </div>
+
+            </section>
+
+            <section class="testimonials-section">
+                <div class="titleTestimonials">
+                    <h2>What Our Valued</h2>
+                    <h2>Clients Are Saying</h2>
+                </div>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <p>"This was by far the best part of it all. To be able to have professional drivers come to
+                            provide transportation for the girls! This was amazing! I was so happy the girls had a great
+                            ride. The car was clean and the drivers were safe. Thank you!!!!!”</p>
+                        <p class="author">— Tracey Laroche</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"I was very pleased with the service provided by the company, from initial booking to drop
+                            off service. The driver was professional. I will definitely be using their services again
+                            and highly recommend them."</p>
+                        <p class="author">— Alma Renae Drongoski</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>“I have used Luxury Ride over a dozen times in the last 2 years. They are always early,
+                            courteous & friendly. Their cars & SUVs are always clean and confortable. Will continue to
+                            use them in the future."</p>
+                        <p class="author">— Anthony Sposato</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"I would like to take the time out and thank luxury rides for an awesome experience. During
+                            visit in America I needed transportation around NYC and CT. As a fraud specialist getting
+                            around town at the
+                            appropriate time was very important.Luxury ride would be at my location 30 minutes prior to
+                            pick up or drop off. I truly believe my stay and mission would not have been the same
+                            without their dedication and communication.Thank You"</p>
+                        <p class="author">— Tania Beauvais</p>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+
+            <section class="reserve" id="reserve">
+                <div id="booking">
 
                     <div class="row" data-aos="fade-up">
                         <div class="booking-form">
@@ -163,94 +392,6 @@
                         </div>
                     </div>
 
-
-                </div>
-            </section>
-
-            <section class="about" id="aboutme">
-                <div class="aboutInfo">
-                    <article data-aos="fade-right">
-                        <figure>
-                            <img src="/img/vinny.JPG" alt="Vinny">
-                        </figure>
-                    </article>
-                    <div class="about-text" data-aos="fade-left">
-                        <h1>About Me</h1>
-                        <h5>Vinny <span>Driving Service</span></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eius odit, qui itaque rem ad
-                            molestiae explicabo ipsum debitis et quam, fugit placeat quidem fugiat id laudantium
-                            temporibus saepe maiores.</p>
-                    </div>
-                </div>
-                <div class="aboutInfo">
-                    <div class="about-text" data-aos="fade-right">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eius odit, qui itaque rem ad
-                            molestiae explicabo ipsum debitis et quam, fugit placeat quidem fugiat id laudantium
-                            temporibus saepe maiores.</p>
-                        <a class='buttonEffectt' href="#reserve" data-aos="fade-up">
-                            <svg>
-                                <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                            </svg>Reserve
-                        </a>
-                    </div>
-                    <article data-aos="fade-left">
-                        <figure class="carPhoto">
-                            <img src="/img/carPhoto.JPG" alt="Vinny">
-                        </figure>
-                    </article>
-                </div>
-            </section>
-
-            <section class="aboutResponsive" id="aboutmeResponsive">
-                <div class="aboutInfo">
-                    <article data-aos="fade-right">
-                        <div class="about-text" >
-                        <h1>About Me</h1>
-                        <h5>Vinny <span>Driving Service</span></h5>
-                        <article data-aos="fade-left">
-                            <figure>
-                                <img class="vinny" src="/img/vinny.JPG" alt="Vinny">
-                            </figure>
-                        </article>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eius odit, qui itaque rem ad
-                            molestiae explicabo ipsum debitis et quam, fugit placeat quidem fugiat id laudantium
-                            temporibus saepe maiores.</p>
-                    </div>
-                </div>
-                <div class="aboutInfo">
-                    <article data-aos="fade-right">
-                        <figure class="carPhoto">
-                            <img src="/img/carPhoto.JPG" alt="Vinny">
-                        </figure>
-                    </article>
-                    <div class="about-text" data-aos="fade-left">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eius odit, qui itaque rem ad
-                            molestiae explicabo ipsum debitis et quam, fugit placeat quidem fugiat id laudantium
-                            temporibus saepe maiores.</p>
-                        <a class='buttonEffectt' href="#reserve" data-aos="fade-up">
-                            <svg>
-                                <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                            </svg>Reserve
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-
-
-            <section id="contact">
-                <div class="contact">
-                    <form data-aos="fade-up">
-                        <h1>Contact Me</h1>
-                        <input type="text" id="firstName" placeholder="First Name" required>
-                        <input type="text" id="lastName" placeholder="Last Name" required>
-                        <input type="email" id="email" placeholder="Email" required>
-                        <input type="text" id="mobile" placeholder="Mobile" required>
-                        <h4>Type Your Message Here...</h4>
-                        <textarea required></textarea>
-                        <input type="submit" value="Send" id="button">
-                    </form>
                 </div>
             </section>
 
@@ -271,7 +412,6 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#reserve">Reserve</a></li>
                     <li class="aboutlink"><a href="#aboutme">About Me</a></li>
-                    <li class="aboutResponsivelink"><a href="#aboutmeResponsive">About Me</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -293,10 +433,11 @@
         AOS.init({
             duration: 1000, // Duración de la animación en milisegundos
         });
-    </script>   
+    </script>
     <script src="/app/email.js"></script>
     <script src="/map/map.js"></script>
-
+    <script src="/app/carousel.js"></script>
+    <script src="/app/testimonials.js"></script>
 </body>
 
 </html>
