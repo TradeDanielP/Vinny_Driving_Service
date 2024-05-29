@@ -7,6 +7,13 @@
     <title>Vinny Professional Driving Service | Home</title>
     <link rel="icon" href="/img/car.png" type="image/x-icon">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
     <script src="/app/headerEffect.js"></script>
     <script src="/map/mapbox.js"></script>
@@ -28,6 +35,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
 
 </head>
 
@@ -35,12 +44,12 @@
 
     <header>
         <nav class="navHeader" data-aos="fade-down">
-            <h2 class="title">Vinny Driving Professional Service</h2>
+            <h2 class="title">Vinny Professional Driving Service</h2>
             <ul class="ulHeader">
                 <li><a href="#home">HOME</a></li>
-                <li><a href="#reserve">RESERVE</a></li>
                 <li class="aboutlink"><a href="#aboutme">ABOUT ME</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#info">INFO</a></li>
+                <li><a href="#reserve">RESERVE</a></li>
             </ul>
         </nav>
 
@@ -50,9 +59,9 @@
 
         <div class="home" id="home">
 
-            <div class="content" data-aos="zoom-in">
+            <div class="content" data-aos="fade-up">
 
-                <div class="car" data-aos="fade-right">
+                <div class="car" data-aos="fade-up">
                     <img class="car" src="/img/carMain.png" width="800px" alt="car">
                 </div>
 
@@ -65,57 +74,62 @@
                 </a>
             </div>
 
-            <div class="videoCar">
+            <div class="videoCar" data-aos="fade-up">
                 <video autoplay loop muted plays-inline class="backVideo">
                     <source src="/video/videoCar.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
 
-        
+
 
         <main class="mainSection">
 
             <section class="about" id="aboutme">
                 <div class="aboutInfo">
-                    <h1>About Me</h1>
-                    <article data-aos="fade-right">
+                    <h1 data-aos="fade-up">About Me</h1>
+                    <article data-aos="fade-up">
                         <figure>
                             <img src="/img/vinny.JPG" alt="Vinny">
                         </figure>
                     </article>
-                    <div class="about-text" data-aos="fade-left">
-                        <p>Hello, I'm <span>Vincent</span>, I've been driving professionally for about 18 years, starting my career
+                    <div class="about-text">
+                        <p data-aos="fade-up">Hello, I'm <span>Vincent</span>, I've been driving professionally for
+                            about 18 years,
+                            starting my career
                             in New York and now serving the Nashville area. Throughout my career, I've had the privilege
                             of transporting a diverse range of clients, from CEOs and rockstars to regular people like
                             myself. No matter who you are, I am committed to providing top-notch, first-class service to
                             everyone.</p>
-                        <p>My aim is to ensure your complete satisfaction and make your journey as comfortable and
+                        <p data-aos="fade-up">My aim is to ensure your complete satisfaction and make your journey as
+                            comfortable and
                             enjoyable as possible. I take pride in offering the same high-quality service to all my
                             clients, ensuring that every ride is a pleasant and memorable experience.</p>
-                        <p> I hold all the necessary documents and certifications, including airport decals for both
+                        <p data-aos="fade-up"> I hold all the necessary documents and certifications, including
+                            airport decals for both
                             inside and outside pick-ups. Whether you need to be picked up from the inside terminal or
                             the designated limo area, I have it covered. You can trust me to handle your transportation
                             needs with the utmost professionalism and care.</p>
-                        <p>Thank you for considering my services. I look forward to driving you soon!</p>
+                        <p data-aos="fade-up">Thank you for considering my services. I look forward to
+                            driving you soon!</p>
                     </div>
                 </div>
             </section>
 
-            <section class="carInfo">
+            <section class="carInfo" id="info">
 
-                <h2>2019 Lincoln Continental Reserve</h2>
-                <hr>
-                <h5>A CLEAN AND COMFORTABLE CORPORATE Lincoln </h4>
+                <h2 data-aos="fade-up">2019 Lincoln Continental Reserve</h2>
+                <hr data-aos="fade-up">
+                <h5 data-aos="fade-up">A CLEAN AND COMFORTABLE CORPORATE Lincoln </h4>
 
-                    <div class="car-image">
+                    <div class="car-image" data-aos="fade-up">
                         <img src="/img/carMain.png" width="600px" alt="Car">
                     </div>
 
                     <div class="details">
 
                         <div class="carousel">
-                            <div class="carousel-container">
+                            <div class="carousel-container" data-aos="flip-up">
                                 <img src="/img/slider/slider1.jpg" width="500px" alt="Interior Image"
                                     class="carousel-image">
                                 <img src="/img/slider/slider2.jpg" width="500px" alt="Interior Image"
@@ -129,10 +143,10 @@
                                 <img src="/img/slider/slider6.jpg" width="500px" alt="Interior Image"
                                     class="carousel-image" style="display: none;">
                             </div>
-                            <button class="carousel-button prev-button">&lt;</button>
-                            <button class="carousel-button next-button">&gt;</button>
+                            <button class="carousel-button prev-button" data-aos="flip-up">&lt;</button>
+                            <button class="carousel-button next-button" data-aos="flip-up">&gt;</button>
 
-                            <div class="carousel-indicators">
+                            <div class="carousel-indicators" data-aos="fade-up">
                                 <span class="indicator active" data-index="0"></span>
                                 <span class="indicator" data-index="1"></span>
                                 <span class="indicator" data-index="2"></span>
@@ -143,16 +157,17 @@
                         </div>
 
                         <div class="info">
-                            <h3>Capacity</h3>
-                            <p>Maximum Passengers: 4</p>
-                            <p>Maximum Luggage: 3</p>
-                            <h3>Style</h3>
-                            <p>Our Business Lincoln Continental has comfortable legroom and superior trunk space. Most
+                            <h3 data-aos="fade-up">Capacity</h3>
+                            <p data-aos="fade-up">Maximum Passengers: 4</p>
+                            <p data-aos="fade-up">Maximum Luggage: 3</p>
+                            <h3 data-aos="fade-up">Style</h3>
+                            <p data-aos="fade-up">Our Business Lincoln Continental has comfortable legroom and
+                                superior trunk space. Most
                                 of all
                                 you can rely on a smooth and safe ride to take you where you want to go.</p>
-                            <h3>Availability</h3>
-                            <p>Throughout most major cities globally</p>
-                            <button class="book-now">BOOK NOW</button>
+                            <h3 data-aos="fade-up">Availability</h3>
+                            <p data-aos="fade-up">Throughout most major cities globally</p>
+                            <a href="#reserve"><button class="book-now" data-aos="fade-up">BOOK NOW</button></a>
                         </div>
 
                     </div>
@@ -160,32 +175,32 @@
             </section>
 
             <section class="services-container">
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up">
                     <h3>Executive Corporate Travel</h3>
                     <p>Professional solutions for corporate travelers.</p>
                     <hr>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up">
                     <h3>High-end Roadshow Transportation</h3>
                     <p>Specialist roadshow and tour transportation services.</p>
                     <hr>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up">
                     <h3>Door-to-door Chauffeur Services</h3>
                     <p>Convenient, customized travel services.</p>
                     <hr>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up">
                     <h3>Bespoke On-Demand Luxury Travel</h3>
                     <p>Personalized service to meet your needs.</p>
                     <hr>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up">
                     <h3>Premium Airport Transfers</h3>
                     <p>The most comfortable way to start or end your journey.</p>
                     <hr>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up">
                     <h3>Sophisticated Event Transportation Solutions</h3>
                     <p>Expertly executed event transportation.</p>
                     <hr>
@@ -194,68 +209,78 @@
 
             <section class="keyBenefits">
 
-               <!--  <h2>Key Benefits</h2> -->
+                <h2>Key Benefits</h2>
 
-                <div class="feature">
-                    <i class="fa fa-user fa-3x fa-fw"></i>
-                    <h3>Account Representative</h3>
-                    <p>A truly personalized experience based around your preferences.</p>
+                <div class="keyBenefitsItems">
+
+                    <div class="feature" data-aos="fade-up">
+                        <i class="fa fa-user fa-3x fa-fw"></i>
+                        <h3>Account Representative</h3>
+                        <p>A truly personalized experience based around your preferences.</p>
+                    </div>
+
+                    <div class="feature" data-aos="fade-up">
+                        <i class="fa fa-stopwatch fa-3x fa-fw"></i>
+                        <h3>Faster Booking Process</h3>
+                        <p>Never wait on hold to book a reservation again!</p>
+                    </div>
+
+                    <div class="feature" data-aos="fade-up">
+                        <i class="fa-regular fa-window-restore fa-3x fa-fw"></i>
+                        <h3>Clear & Transparent Billing</h3>
+                        <p>All-inclusive pricing takes the guess work out of budgeting.</p>
+                    </div>
+
+                    <div class="feature" data-aos="fade-up">
+                        <i class="fa-solid fa-shield-halved fa-3x fa-fw"></i>
+                        <h3>Safe | Comfortable Ride</h3>
+                        <p>Extended leg, and head room with advanced safety features makes for a stress-free and
+                            comfortable
+                            ride.</p>
+                    </div>
+
+                    <div class="feature" data-aos="fade-up">
+                        <i class="fa fa-mobile-screen fa-3x fa-fw"></i>
+                        <h3>Advanced Technology</h3>
+                        <p>See your chauffeur details, and track your assigned vehicle in real time. Our powerful
+                            technology
+                            streamlines information and puts you in "The Know".</p>
+                    </div>
+
+                    <div class="feature" data-aos="fade-up">
+                        <i class="fa fa-wallet fa-3x fa-fw"></i>
+                        <h3>Cost Effective Options</h3>
+                        <p>We design a program around Your budget, giving you control.</p>
+                    </div>
+
+                    <div class="feature" data-aos="fade-up">
+                        <i class="fa fa-graduation-cap fa-3x fa-fw"></i>
+                        <h3>PAX Certified Chauffeurs</h3>
+                        <p>Our chauffeurs go through advanced customer service training designed by Ritz Carlton
+                            Concierge.
+                        </p>
+                    </div>
+
+                    <div class="feature" data-aos="fade-up">
+                        <i class="fa fa-earth fa-3x fa-fw"></i>
+                        <h3>Events? Busses? Group Travel?</h3>
+                        <p>We have you covered with a full service fleet that can provide coverage for any need you
+                            might
+                            have.</p>
+                    </div>
+
                 </div>
 
-                <div class="feature">
-                    <i class="fa fa-stopwatch fa-3x fa-fw"></i>
-                    <h3>Faster Booking Process</h3>
-                    <p>Never wait on hold to book a reservation again!</p>
-                </div>
 
-                <div class="feature">
-                    <i class="fa-regular fa-window-restore fa-3x fa-fw"></i>
-                    <h3>Clear & Transparent Billing</h3>
-                    <p>All-inclusive pricing takes the guess work out of budgeting.</p>
-                </div>
-
-                <div class="feature">
-                    <i class="fa-solid fa-shield-halved fa-3x fa-fw"></i>
-                    <h3>Safe | Comfortable Ride</h3>
-                    <p>Extended leg, and head room with advanced safety features makes for a stress-free and comfortable
-                        ride.</p>
-                </div>
-
-                <div class="feature">
-                    <i class="fa fa-mobile-screen fa-3x fa-fw"></i>
-                    <h3>Advanced Technology</h3>
-                    <p>See your chauffeur details, and track your assigned vehicle in real time. Our powerful technology
-                        streamlines information and puts you in "The Know".</p>
-                </div>
-
-                <div class="feature">
-                    <i class="fa fa-wallet fa-3x fa-fw"></i>
-                    <h3>Cost Effective Options</h3>
-                    <p>We design a program around Your budget, giving you control.</p>
-                </div>
-
-                <div class="feature">
-                    <i class="fa fa-graduation-cap fa-3x fa-fw"></i>
-                    <h3>PAX Certified Chauffeurs</h3>
-                    <p>Our chauffeurs go through advanced customer service training designed by Ritz Carlton Concierge.
-                    </p>
-                </div>
-
-                <div class="feature">
-                    <i class="fa fa-earth fa-3x fa-fw"></i>
-                    <h3>Events? Busses? Group Travel?</h3>
-                    <p>We have you covered with a full service fleet that can provide coverage for any need you might
-                        have.</p>
-                </div>
 
             </section>
 
             <section class="testimonials-section">
-                <div class="titleTestimonials">
+                <div class="titleTestimonials" data-aos="fade-up">
                     <h2>What Our Valued</h2>
                     <h2>Clients Are Saying</h2>
                 </div>
-                <div class="testimonials">
+                <div class="testimonials" data-aos="fade-up">
                     <div class="testimonial">
                         <p>"This was by far the best part of it all. To be able to have professional drivers come to
                             provide transportation for the girls! This was amazing! I was so happy the girls had a great
@@ -284,7 +309,7 @@
                         <p class="author">— Tania Beauvais</p>
                     </div>
                 </div>
-                <div class="carousel-indicators">
+                <div class="carousel-indicators" data-aos="fade-up">
                     <span class="dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
@@ -298,28 +323,28 @@
                     <div class="row" data-aos="fade-up">
                         <div class="booking-form">
                             <div class="container">
-                                <form class="form">
+                                <form class="form" id="form">
 
                                     <div class="containerMaps">
 
-                                        <div id="map"></div>
+                                        <div id="map" data-aos="fade-up"></div>
 
                                     </div>
 
                                     <div class="row emailAndName">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-6" data-aos="fade-up">
                                             <div class="form-group">
                                                 <input class="form-control" id="name" type="name"
                                                     placeholder="Your full name" required>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-6" data-aos="fade-up">
                                             <div class="form-group">
 
                                                 <input class="form-control" id="email" type="email"
-                                                    placeholder="Your email">
+                                                    placeholder="Your email" required>
                                             </div>
                                         </div>
 
@@ -328,7 +353,7 @@
                                     <div class="row telDateSelect">
 
                                         <div class="telAndSelect">
-                                            <div class="col-md-3">
+                                            <div class="col-md-3" data-aos="fade-up">
                                                 <div class="form-group">
 
                                                     <input class="form-control" id="tel" type="tel"
@@ -336,7 +361,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-3" data-aos="fade-up">
                                                 <div class="form-group">
 
                                                     <select class="form-control" id="selectPassengers" required>
@@ -352,13 +377,13 @@
                                         </div>
 
                                         <div class="dates">
-                                            <div class="col-md-3">
+                                            <div class="col-md-3" data-aos="fade-up">
                                                 <div class="form-group">
                                                     <input class="form-control" id="pickUpDate" type="date" required>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-3" data-aos="fade-up">
                                                 <div class="form-group">
 
                                                     <input class="form-control" id="pick-up-time" type="time" required>
@@ -370,7 +395,7 @@
                                     </div>
 
                                     <div class="row annotattionRow">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12" data-aos="fade-up">
                                             <div class="form-group-text">
 
                                                 <input class="form-control" id="additionalRemarks"
@@ -382,10 +407,8 @@
                                     </div>
 
                                     <div class="row buttonReserveRow" data-aos="fade-up">
-                                        <a class='buttonEffectt' href="#reserve">
-                                            <svg>
-                                                <rect x="0" y="0" fill="none" width="100%" height="100%" />
-                                            </svg>Reserve</a>
+                                        <button class="book-now" id="reserveForm" type="submit" data-aos="fade-up">BOOK
+                                            NOW</button>
                                     </div>
 
                                 </form>
@@ -401,7 +424,7 @@
     </div>
 
     <footer>
-        <div class="footerContainer" data-aos="zoom-in">
+        <div class="footerContainer" data-aos="fade-up">
             <div class="socialIcons">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -411,15 +434,14 @@
             <div class="footerNav">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#reserve">Reserve</a></li>
                     <li class="aboutlink"><a href="#aboutme">About Me</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#info">Info</a></li>
+                    <li><a href="#reserve">Reserve</a></li>
                 </ul>
             </div>
         </div>
         <div class="footerBottom">
-            <p>Copyright &copy;2024 - Designed by <span class="designer"><a class="designer" href="#">Daniel
-                        Parra</a></span></p>
+            <p>Copyright &copy;2024</p>
         </div>
     </footer>
 

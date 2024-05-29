@@ -2,14 +2,26 @@
     background-color: #eeeeee;
     color: #303133;
     margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.keyBenefits h2{
+    font-size: 400%;
+}
+
+.keyBenefitsItems{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
     align-items: start;
     gap: 10px;
-    padding: 100px 25%;
+    padding: 0px 25%;
     font-size: 18px;
     margin-top: 100px;
 }
@@ -34,8 +46,8 @@
 /* MEDIDAS PARA CELULAR Y TABLET VERTICAL */
 @media screen and (min-width: 576px) and (max-width: 991.99px) and (orientation: portrait) {
 
-    .keyBenefits{
-        padding: 100px 10%;
+    .keyBenefitsItems{
+        padding: 0px 10%;
         text-align: center;
     } 
 
@@ -43,10 +55,10 @@
 
 @media screen and (max-width: 575.98px) and (orientation: portrait) {
 
-    .keyBenefits{
+    .keyBenefitsItems{
         display: flex;
         flex-direction: column;
-        padding: 100px 10%;
+        padding: 0px 10%;
         text-align: center;
     }
 
@@ -55,9 +67,9 @@
 /* MEDIDAS PARA CELULAR Y TABLET HORIZONTAL */
 @media screen and (min-width: 992px) and (max-width: 1575.99px) and (orientation: landscape) {
 
-    .keyBenefits{
+    .keyBenefitsItems{
         grid-template-columns: repeat(4,1fr);
-        padding: 100px 10%;
+        padding: 0px 10%;
     }
 
     .feature{
@@ -74,7 +86,7 @@
 
 @media screen and (max-width: 991.99px) and (max-height: 605px) and (orientation: landscape) {
 
-    .keyBenefits{
+    .keyBenefitsItems{
         display: flex;
         flex-direction: column;
         text-align: center;
