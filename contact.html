@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinny Professional Driving Service | Contact Us</title>
+    <link rel="icon" href="/img/car.png" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styleGeneral.css">
+    <link rel="stylesheet" href="/css/headerFooterContact.css">
+    <link rel="stylesheet" href="/css/contact.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("dI4ADH84wUvDAlc0q"); // Reemplaza YOUR_USER_ID con tu User ID de EmailJS
+        })();
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navHeader" data-aos="fade-down">
+            <h2 class="title">Vinny Professional Driving Service</h2>
+            <ul class="ulHeader">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="contact.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="mainSection">
+
+        <div class="contactMe">
+
+            <h1 data-aos="fade-up">Experience Luxury Travel with Vincent</h1>
+
+            <p data-aos="fade-up">With years of dedicated service, I am committed to providing a personalized and
+                exceptional travel
+                experience for each client.</p>
+
+            <form id="contact-form">
+                <div class="form-group" data-aos="fade-up">
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-row" data-aos="fade-up">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                    </div>
+                </div>
+                <div class="form-group" data-aos="fade-up">
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" data-aos="fade-up">Contact Me</button>
+            </form>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContainer" data-aos="fade-up">
+            <div class="socialIcons">
+                <a title="facebook" href="https://www.facebook.com/vinnydriving"><i class="fa-brands fa-facebook"></i></a>
+                <a title="instagram" href="https://www.instagram.com/vinnydriving"><i class="fa-brands fa-instagram"></i></a>
+                <a title="x" href="https://x.com/VinnyDriving"><i class="fa-brands fa-twitter"></i></a>
+                <a title="tiktok" href="https://www.tiktok.com/@vinnydriving"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.querySelector('#name').value;
+            const email = document.querySelector('#email').value;
+            const phone = document.querySelector('#phone').value;
+            const message = document.querySelector('#message').value;
+
+            const paramsClient = {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            };
+
+            emailjs.send('service_contact', 'template_contact', paramsClient)
+                .then(function () {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Message Sent',
+                        text: 'Your message has been sent successfully!',
+                        allowOutsideClick: false,
+                        showCancelButton: false,
+                        confirmButtonText: "OK"
+                    }).then(() => {
+                        resetForm(); // Reiniciar el formulario después de enviar los correos
+                        location.reload();
+                    })
+                }, function (error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong! Please try again later.'
+                    });
+                });
+        });
+
+        function resetForm() {
+            document.getElementById('contact-form').reset(); // Restablece todos los campos del formulario
+        }
+    </script>
+</body>
+
+</html>
